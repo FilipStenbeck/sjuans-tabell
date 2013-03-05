@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" ng-app> 
+    <head>
+        <meta charset="utf-8">
+     
+        <title></title>
+        <meta name="description" content="seven times X is...">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/angular-app.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/bootstrap-responsive.css">
+		
+		<script src="js/vendor/angular-1.0.5.min.js"></script>
+        <script src="js/angular-main.js"></script>
+      
+    </head>
+    <body ng-controller="sjuanCtrl">
+        <div class="row default-margin">
+            <div class="hero-unit default-margin header">
+                 <img src="http://angularjs.org/img/AngularJS-large.png"/>
+                <h5>
+                    ... 7:ans tabell är svår.
+                </h5>
+            </div>
+        </div>	
+		  <div class="row" style="margin : 15px 15px 15px 15px ">
+			 <div class='row'  ng-repeat="seven in sevens">
+			 
+                <div class='span4 offset6 well default-margin'>
+                    <strong> {{seven.operator}} </strong> är 
+                    <strong>  {{seven.result}} </strong>
+                </div> 
+            </div>
+		</div>
+    </body>
+</html>

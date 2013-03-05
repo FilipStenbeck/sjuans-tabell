@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="seven times X is...">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/bootstrap-responsive.css">
+      
+    </head>
+    <body style ="background-image: url(img/navy_blue.png)">
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Content starts here -->
+       
+        <div class="row default-margin">
+            <div class="hero-unit default-margin header">
+                 <img src="img/Backbone_logo_logo_only.png" class="hidden-phone" style="width:100px; height :100px;"/>
+                <h3>
+                    REST | BACKBONE
+                </h3>
+                <h5>
+                    ... 7:ans tabell är svår.
+                </h5>
+            </div>
+        </div>
+       <div class="row" style="margin : 5px 50px 5px 50px ">
+	       <div class="span12">
+		       <div class="alert fade" style="min-width: 150px">
+		            <button type="button" class="close" data-dismiss="alert">×</button>
+		            Laddade in <span></span> stycken 'data' från servern, jag lyssnar på collection reset.
+		       </div>
+	       </div>
+	    </div>
+        <div class="row" style="margin : 5px 5px 5px 5px ">
+            <!-- The dynamic data  -->
+            <div id="data_container"></div>
+        </div>     
+        
+         <!--Content ends here -->
+    
+    
+        <!-- Templates for dynamic data-->
+        
+        <script type="text/template" id="data_template">
+            <div class='row'>
+                <div class='span4 offset<%=i%> well default-margin' style='cursor: pointer;'>
+                    <strong>  <%= operator %> </strong> är 
+                    <strong>   <%=result%>  </strong>
+                </div> 
+            </div>
+        </script>
+        
+         <script type="text/template" id="btn_template">
+            <div class='row'>
+				<div class='offset8 span2'>
+                    <a href="#" class="btn btn-large show-all btn-block" style=" margin-top: 10px">Visa alla...</a>
+                </div> 
+ 				<div class='span2'>
+                    <a href="#" class="btn btn-large btn-primary btn-block" style="margin-top: 10px">Ladda 42</a>
+                </div>                 
+            </div>
+        </script>
+        
+        <!-- Vendor Scripts-->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.2.min.js"><\/script>')</script>
+        <script src="js/vendor/underscore-min.js"></script>
+        <script src="js/vendor/backbone.js"></script>
+        <script src="js/vendor/bootstrap.min.js"></script>
+        
+        <!-- App Scripts-->
+        <script src="js/models.js"></script>
+        <script src="js/collections.js"></script>
+        <script src="js/views.js"></script>
+        <script src="js/router.js"></script>
+        <script src="js/main.js"></script>
+       
+    </body>
+</html>
