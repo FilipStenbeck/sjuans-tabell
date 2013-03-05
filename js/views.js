@@ -63,8 +63,10 @@ app.DataView = Backbone.View.extend({
         });
     },
     loaded : function (collection) {
-      $(".alert").addClass("in");
-      $(".alert span").first().html(collection.length);
+    	$('#load-msg').addClass('in');
+    	$('#load-msg span').first().html(collection.length);
+    	$("#first-load").hide();
+      
        
     },
     showAll : function (event) {
