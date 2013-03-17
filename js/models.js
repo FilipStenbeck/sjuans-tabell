@@ -2,10 +2,7 @@ var app = app || {};
 
 app.Data = Backbone.Model.extend({
 	
-	defaults: {
-		operator : 'no_value',
-		result : 'no_value'
-	},
+	
 	initialize: function() {
 		this.on("change:operator change:result", function() {
 			console.log("woot");
@@ -13,6 +10,23 @@ app.Data = Backbone.Model.extend({
 		});
 	}
 });
+
+
+
+//RANDOM UNRELATED TESTS BELOW IGNORE THIS
+
+
+/*
+ var user = new app.User();
+ user.set("name","Filip");
+ user.save();
+ */
+
+app.User = Backbone.Model.extend({
+	
+	urlRoot : "service/data/user"
+});
+
 
 
 app.NodeData = Backbone.Model.extend({
