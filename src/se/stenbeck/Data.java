@@ -49,6 +49,15 @@ public class Data {
 		System.out.println("SAVING USER " + user.getName());
 		return "OK";
 	}		
+	
+	//test PUT
+		@PUT
+		@Consumes("application/json")
+		@Path("/user/{id}")
+		public  String saveUser(User user)  {
+			System.out.println("SAVING USER with name " + user.getName() + " and id " + user.getId());
+			return "OK";
+		}		
 
 	
 }
